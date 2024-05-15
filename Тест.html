@@ -1,0 +1,88 @@
+<html>
+    <head> 
+        <title>tiPypsik</title>
+        <meta http-equiv="Content-Type"content="text/html;charset=utf-8">
+    </head>
+    <body bgcolor="#F0FFF0">
+        <h1>На сколько хорошо ты шаришь за Майнкраф?</h1>  
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<meta charset="utf-8">
+<META HTTP-EQUIV="CONTENT-LANGUAGE" CONTENT="ru">
+
+<form name="quiz" class="quiz" id="quiz" action="javascript:check();">
+<h2><font color="44944A">Вопрос 1 (ооооооооочень лёгкий)</h2>
+<h3>Сколько алмазов нужно для алмазной кирки?</h3>
+<input name="vopros1" value="нет" id="value1" type="radio">А чего сразу такой сложный вопрос?<br>
+<input name="vopros1" value="нет" id="value2" type="radio">Ну два конечно<br>
+<input name="vopros1" value="да" id="value3" type="radio">Три естественно<br>
+<input name="vopros1" value="нет" id="value4" type="radio">Однозначно один<br></font>
+<img src="Кирка.webp" width="400" height="400">
+
+
+<h2><font color="00693">Вопрос 2</h2>
+<h3>Какой крафт у седла?</h3>
+<input name="vopros2" value="да" id="value1" type="radio">Эээээ, так оно не крафтится<br>
+<input name="vopros2" value="нет" id="value2" type="radio">Пять кожи и три железа<br>
+<input name="vopros2" value="нет" id="value3" type="radio">Четыре кожи и три железа<br>
+<input name="vopros2" value="нет" id="value4" type="radio">Три кожи, одно железо и поводок<br></font>
+<img src="Седло.jpg" width="400" height="200">
+<h2><font color="0A5F38">Вопрос 3</h2>
+<h3>Как появляются фантомы?</h3>
+<input name="vopros3" value="нет" id="value1" type="radio">Они появляются из специального спавнера в пещерах<br>
+<input name="vopros3" value="да" id="value2" type="radio">Они могут появится ночью если игрок не спал 4 или более ночей<br>
+<input name="vopros3" value="нет" id="value3" type="radio">Они появляются в аду в биоме голубой лес<br>
+<input name="vopros3" value="нет" id="value4" type="radio">Они появляются в сосновом биоме днём<br></font>
+<img src="Фантом.webp" width="400" height="200">
+<h2><font color="3F888F">Вопрос 4</h2>
+<h3>Что нужно житилям, чтобы они начили учить биологию за 8 класс?</h3>
+<input name="vopros4" value="нет" id="value1" type="radio">Учебник по биологии<br>
+<input name="vopros4" value="да" id="value2" type="radio">Морковка или картошка<br>
+<input name="vopros4" value="нет" id="value3" type="radio">Двухместная кровать<br>
+<input name="vopros4" value="нет" id="value4" type="radio">Хорошее настроение<br></font>
+<img src="Житили.png" width="500" height="300">
+<h2><font color="4285B4">Вопрос 5</h2>
+<h3>Как варится зелье невидимости?</h3>
+<input name="vopros5" value="нет" id="value1" type="radio">Пузырёк воды, нарост незера, золотая морковь, редстоун<br>
+<input name="vopros5" value="нет" id="value2" type="radio">Пузырёк воды, нарост незера, светопыль, сверкающий арбуз<br>
+<input name="vopros5" value="да" id="value3" type="radio">Пузырёк воды, нарост незера, золотая морковь, маринованый паучий глаз<br>
+<input name="vopros5" value="нет" id="value4" type="radio">Из креатива взять? разве нет?<br></font>
+<img src="Зелья.jpg" width="400" height="200">
+<br>
+<h2><input value="Ну нажми" type="submit"></h2>
+</form>
+<script>
+ function check()
+ {
+ var нет=0;
+ var да=0;
+ var otvet="";
+ var choice;
+ for (var v=1; v<=5; v++)
+ {
+ var q = document.forms['quiz'].elements['vopros'+v];
+
+ for (var i=0; i<q.length; i++)
+  {
+  if (q[i].checked) {
+  choice=q[i].value;
+  }
+  }
+  if (choice=="да") {да++;}
+  if (choice=="нет") {нет++;}
+ }
+ switch (true) {
+ case (да<2): otvet="Ну ты прям нуб";break;
+ case (да==2): otvet="Ну не очень шаришь";break;
+ case (да==3): otvet="Ну видно что играл немного";break;
+ case (да==4): otvet="Видно, что почти проффесионал";break;
+ case (да==5): otvet="Моё к тебе уважение, ты профи!";break;
+ default: otvet="очень плохо";break;
+ }
+ alert(otvet);
+ }
+</script>
+        <ul>
+             <li><a href="index.html"><h4>Вернуться на Главную страницу</h4></a></li>
+        </ul>
+    </body>
+</html>
